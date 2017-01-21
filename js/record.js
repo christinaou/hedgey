@@ -32,7 +32,7 @@ function startRecording() {
 function stopRecording() {
   recorder.stop();
   recorder.exportWAV(function(s) {
-    audio.src = window.webkitURL.createObjectURL(s);
+    audio.src = window.URL.createObjectURL(s);
   });
 }
 
