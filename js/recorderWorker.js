@@ -82,7 +82,7 @@ function exportWAV(type){
   this.postMessage(audioBlob);
 
 
-  var obj = audioBlob
+  var obj = audioBlob;
 
   var URL = 'mongodb://128.91.56.204';
 
