@@ -1,16 +1,5 @@
 var recording = false;
 
-function clickRecord() {
-  if (!recording) {
-    console.log('Start recording');
-    startRecording();
-    recording = true;
-  } else {
-    console.log('End recording');
-    stopRecording();
-    recording = false;
-  }
-}
 
 var onFail = function(e) {
             console.log('Rejected!', e);
@@ -43,7 +32,19 @@ function startRecording() {
 function stopRecording() {
   recorder.stop();
   recorder.exportWAV(function(s) {
-                      
-                        audio.src = window.URL.createObjectURL(s);
+    audio.src = window.URL.createObjectURL(s);
   });
+}
+
+
+function clickRecord() {
+  if (!recording) {
+    console.log('Start recording');
+    startRecording();
+    recording = true;
+  } else {
+    console.log('End recording');
+    stopRecording();
+    recording = false;
+  }
 }
