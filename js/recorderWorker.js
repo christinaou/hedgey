@@ -66,7 +66,13 @@ function blobToFile(theBlob, fileName) {
 
 var myFile;
 
-
+function handleButtonResponse(data) {
+      // parse the json string
+      var jsonObject = JSON.parse(data);
+      console.log(jsonObject);
+      console.log("huzzah");
+  }
+  
 function exportWAV(type){
   var bufferL = mergeBuffers(recBuffersL, recLength);
   var bufferR = mergeBuffers(recBuffersR, recLength);
@@ -84,40 +90,21 @@ function exportWAV(type){
 
   var obj = audioBlob;
 
-  $(function(){
-    $.ajax({
-      url: 'http:mongodb//128.91.56.204:27017/test/wei',
-      type: 'get',
-      dataType: 'jsonp',
-      jsonp: 'jsonp', // mongod is expecting the parameter name to be called "jsonp"
-      success: function (data) {
-        console.log('success', data);
-        console.log("EXTRA SUCCESS");
-      },
-      error: function (XMLHttpRequest, textStatus, errorThrown) {
-        console.log('error', errorThrown);
-      }
+  
+
+  // make an ajax call
+  $.ajax({
+    dataType: 'jsonp',
+    jsonpCallback: '_wrapper',
+    data: $('#formID').serialize(),
+    type: 'POST',
+    url: "https://mongodb:128.91.56.204/",
+    success: handleButtonResponse,
     });
-  });//]]>
+  
+ 
 
-  // var URL = 'mongodb://128.91.56.204';
 
-  // $.ajax({
-  //   url: URL,
-  //   type: "POST",
-  //   data: JSON.stringify(obj),
-  //   contentType: "application/json",
-  //   success: function(data) {
-  //     console.log('success --> data :', data);
-
-  //   },
-  //   error:   function(xhr, text, err) {
-  //     console.log('error: ',err);
-  //     console.log('text: ', text);
-  //     console.log('xhr: ',xhr);
-  //     console.log("there is a problem whit your request, please check ajax request");
-  //   }
-  // });
 }
 
 function exportMonoWAV(type){
