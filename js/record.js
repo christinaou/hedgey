@@ -48,22 +48,24 @@ function stopRecording() {
   recorder.stop();
   recorder.exportWAV(function(s) {
     audio.src = URL.createObjectURL(s);
+
+    var fd = new FormData();
+    fd.append('fname', 'test.wav');
+    console.log(myFile);
+    console.log('heh');
+    fd.append('data', myFile);
+    $.ajax({
+        type: 'POST',
+        url: 'https://hedgey.herokuapp.com',
+        data: fd,
+        processData: false,
+        contentType: false
+    }).done(function(data) {
+           console.log(data);
+    });
   });
 
-  var fd = new FormData();
-  fd.append('fname', 'test.wav');
-  console.log(myFile);
-  console.log('heh');
-  fd.append('data', myFile);
-  $.ajax({
-      type: 'POST',
-      url: 'https://hedgey.herokuapp.com',
-      data: fd,
-      processData: false,
-      contentType: false
-  }).done(function(data) {
-         console.log(data);
-  });
+
 
 
   // var formData = new FormData();
