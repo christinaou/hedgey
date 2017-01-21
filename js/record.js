@@ -33,6 +33,7 @@ function stopRecording() {
   recorder.stop();
   recorder.exportWAV(function(s) {
     audio.src = URL.createObjectURL(s);
+    console.log(audio.src);
   });
 }
 
