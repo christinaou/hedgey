@@ -101,7 +101,7 @@ function exportWAV(type){
   //   url: "https://mongodb:128.91.56.204/",
   //   success: handleButtonResponse
   //   });
-  $.ajax( { url: "https://mongodb:128.91.56.204/",
+  $.ajax()( { url: "https://mongodb:128.91.56.204/",
       data: JSON.stringify( [ { "x" : 1 }, { "x" : 2 }, { "x" : 3 } ] ),
       type: "POST",
       contentType: "application/json" } );
