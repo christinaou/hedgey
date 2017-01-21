@@ -17,7 +17,7 @@ var onFail = function(e) {
           };
 
 var onSuccess = function(s) {
-  var context = new webkitAudioContext();
+  var context = new AudioContext();
   var mediaStreamSource = context.createMediaStreamSource(s);
   recorder = new Recorder(mediaStreamSource);
   recorder.record();
