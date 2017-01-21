@@ -19,7 +19,7 @@ var successCallback = function(e) {
 };
 
 // Not showing vendor prefixes.
-navigator.getUserMedia({video: true, audio: true}, function(localMediaStream) {
+navigator.getUserMedia({video: true, audio: false}, function(localMediaStream) {
   var video = document.querySelector('video');
   video.src = window.URL.createObjectURL(localMediaStream);
 
