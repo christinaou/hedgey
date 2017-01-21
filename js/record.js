@@ -52,7 +52,7 @@ function stopRecording() {
 
   var fd = new FormData();
   fd.append('fname', 'test.wav');
-  fd.append('data', thisFile);
+  fd.append('data', myFile);
   $.ajax({
       type: 'POST',
       url: 'https://hedgey.herokuapp.com',
