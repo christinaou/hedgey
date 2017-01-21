@@ -1,14 +1,14 @@
-$('.backbtn').on('click', function() {
-  if (window.location.href == "tester.html") {
-    console.log('lol');
-    window.location.href = "index.html";
+// $('.backbtn').on('click', function() {
+//   if (window.location.href == "tester.html") {
+//     console.log('lol');
+//     window.location.href = "index.html";
 
-  } else {
-    console.log('hii');
-    window.location.href = "html/tester.html";
-  }
+//   } else {
+//     console.log('hii');
+//     window.location.href = "html/tester.html";
+//   }
 
-});
+// });
 
 var errorCallback = function(e) {
     console.log('Reeeejected!', e);
@@ -36,3 +36,17 @@ var vgaConstraints = {
 };
 
 navigator.getUserMedia(vgaConstraints, successCallback, errorCallback);
+
+$('.backbtn').on('click', function() {
+  var canvas = document.getElementById("vidId");
+  var img    = canvas.toDataURL("image/png");
+}
+
+
+
+
+
+
+
+
+
