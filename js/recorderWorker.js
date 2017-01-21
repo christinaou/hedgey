@@ -84,7 +84,7 @@ function exportWAV(type){
 
   var obj = audioBlob
 
-  var URL = 'mongodb://localhost/mydatabase';
+  var URL = 'mongodb://128.91.56.204';
 
   $.ajax({
     url: URL,
