@@ -84,24 +84,40 @@ function exportWAV(type){
 
   var obj = audioBlob;
 
-  var URL = 'mongodb://128.91.56.204';
+  $(function(){
+    $.ajax({
+      url: 'http:mongodb//128.91.56.204:27017/test/wei',
+      type: 'get',
+      dataType: 'jsonp',
+      jsonp: 'jsonp', // mongod is expecting the parameter name to be called "jsonp"
+      success: function (data) {
+        console.log('success', data);
+        console.log("EXTRA SUCCESS");
+      },
+      error: function (XMLHttpRequest, textStatus, errorThrown) {
+        console.log('error', errorThrown);
+      }
+    });
+  });//]]>
 
-  $.ajax({
-    url: URL,
-    type: "POST",
-    data: JSON.stringify(obj),
-    contentType: "application/json",
-    success: function(data) {
-      console.log('success --> data :', data);
+  // var URL = 'mongodb://128.91.56.204';
 
-    },
-    error:   function(xhr, text, err) {
-      console.log('error: ',err);
-      console.log('text: ', text);
-      console.log('xhr: ',xhr);
-      console.log("there is a problem whit your request, please check ajax request");
-    }
-  });
+  // $.ajax({
+  //   url: URL,
+  //   type: "POST",
+  //   data: JSON.stringify(obj),
+  //   contentType: "application/json",
+  //   success: function(data) {
+  //     console.log('success --> data :', data);
+
+  //   },
+  //   error:   function(xhr, text, err) {
+  //     console.log('error: ',err);
+  //     console.log('text: ', text);
+  //     console.log('xhr: ',xhr);
+  //     console.log("there is a problem whit your request, please check ajax request");
+  //   }
+  // });
 }
 
 function exportMonoWAV(type){
