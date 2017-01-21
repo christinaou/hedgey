@@ -38,9 +38,10 @@ var vgaConstraints = {
 navigator.getUserMedia(vgaConstraints, successCallback, errorCallback);
 
 $('.backbtn').on('click', function() {
+  console.log("CLICKK");
   var canvas = document.getElementById("vidId");
   var img    = canvas.toDataURL("image/png");
-}
+});
 
 
 
