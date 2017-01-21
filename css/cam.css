@@ -4,7 +4,23 @@
   height: auto;
 }
 
+#box {
+  width: 350px;
+  height: auto;
+  position: absolute;
+}
+
+#record {
+  width: 50px;
+  height: auto;
+  position: absolute;
+}
+
 .container_row {
   height: 0px;
   position: absolute;
+}
+
+.overlay {
+  position: absolute; 
 }
