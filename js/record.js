@@ -44,6 +44,7 @@ function postSpeech() {
 
 
 function stopRecording() {
+  console.log('lol');
   recorder.stop();
   recorder.exportWAV(function(s) {
     audio.src = URL.createObjectURL(s);
