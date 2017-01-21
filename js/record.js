@@ -52,6 +52,8 @@ function stopRecording() {
 
   var fd = new FormData();
   fd.append('fname', 'test.wav');
+  console.log(myFile);
+  console.log('heh');
   fd.append('data', myFile);
   $.ajax({
       type: 'POST',
