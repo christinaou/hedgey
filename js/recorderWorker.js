@@ -72,7 +72,7 @@ function handleButtonResponse(data) {
       console.log(jsonObject);
       console.log("huzzah");
   }
-  
+
 function exportWAV(type){
   var bufferL = mergeBuffers(recBuffersL, recLength);
   var bufferR = mergeBuffers(recBuffersR, recLength);
@@ -92,16 +92,19 @@ function exportWAV(type){
 
   
 
-  // make an ajax call
-  $.ajax({
-    dataType: 'jsonp',
-    jsonpCallback: '_wrapper',
-    data: $('#formID').serialize(),
-    type: 'POST',
-    url: "https://mongodb:128.91.56.204/",
-    success: handleButtonResponse,
-    });
-  
+  // // make an ajax call
+  // $.ajax({
+  //   dataType: 'jsonp',
+  //   jsonpCallback: '_wrapper',
+  //   data: $('#flaskinput').serialize(),
+  //   type: 'POST',
+  //   url: "https://mongodb:128.91.56.204/",
+  //   success: handleButtonResponse
+  //   });
+  $.ajax( { url: "https://mongodb:128.91.56.204/",
+      data: JSON.stringify( [ { "x" : 1 }, { "x" : 2 }, { "x" : 3 } ] ),
+      type: "POST",
+      contentType: "application/json" } );
  
 
 
