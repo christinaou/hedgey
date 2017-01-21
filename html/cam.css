@@ -8,3 +8,7 @@
   height: 0px;
   position: absolute;
 }
+
+.overlay {
+  position: absolute; 
+}
