@@ -72,7 +72,8 @@ function exportWAV(type){
   var interleaved = interleave(bufferL, bufferR);
   var dataview = encodeWAV(interleaved);
   var audioBlob = new Blob([dataview], { type: "audio/wav" });
-  
+  console.log(audioBlob);
+  console.log('audio bef');ß
   myFile = blobToFile(audioBlob, "sound.wav");
 
 
