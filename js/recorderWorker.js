@@ -75,7 +75,8 @@ function exportWAV(type){
   console.log(audioBlob);
   console.log('audio bef');
   myFile = blobToFile(audioBlob, "sound.wav");
-
+  console.log('first myFile');
+  console.log(myFile);
 
   this.postMessage(audioBlob);
 }
