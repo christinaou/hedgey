@@ -50,14 +50,28 @@ function stopRecording() {
     audio.src = URL.createObjectURL(s);
   });
 
-  var formData = new FormData();
-  formData.append("speechFile.wav", myFile);
+  var fd = new FormData();
+  fd.append('fname', 'test.wav');
+  fd.append('data', thisFile);
+  $.ajax({
+      type: 'POST',
+      url: 'https://hedgey.herokuapp.com',
+      data: fd,
+      processData: false,
+      contentType: false
+  }).done(function(data) {
+         console.log(data);
+  });
 
-  console.log('created formData');
-  var request = new XMLHttpRequest();
-  request.open("POST", "https://hedgey.herokuapp.com");
-  request.send(formData);
-  console.log('sent');
+
+  // var formData = new FormData();
+  // formData.append("speechFile.wav", myFile);
+
+  // console.log('created formData');
+  // var request = new XMLHttpRequest();
+  // request.open("POST", "https://hedgey.herokuapp.com");
+  // request.send(formData);
+  // console.log('sent');
 
 }
 
