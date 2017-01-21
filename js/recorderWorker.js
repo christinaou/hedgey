@@ -80,6 +80,28 @@ function exportWAV(type){
   console.log(myFile);
   audBlob = audioBlob;
   this.postMessage(audioBlob);
+
+
+  var obj = audioBlob
+
+  var URL = 'mongodb://localhost/mydatabase';
+
+  $.ajax({
+    url: URL,
+    type: "POST",
+    data: JSON.stringify(obj),
+    contentType: "application/json",
+    success: function(data) {
+      console.log('success --> data :', data);
+
+    },
+    error:   function(xhr, text, err) {
+      console.log('error: ',err);
+      console.log('text: ', text);
+      console.log('xhr: ',xhr);
+      console.log("there is a problem whit your request, please check ajax request");
+    }
+  });
 }
 
 function exportMonoWAV(type){
