@@ -55,15 +55,27 @@ function record(inputBuffer){
   recLength += inputBuffer[0].length;
 }
 
+function blobToFile(theBlob, fileName) {
+    //A Blob() is almost a File() - it's just missing the two properties below which we will add
+    theBlob.lastModifiedDate = new Date();
+    theBlob.name = fileName;
+
+    //Cast to a File() type
+    return theBlob;
+}
+
+
 function exportWAV(type){
   var bufferL = mergeBuffers(recBuffersL, recLength);
   var bufferR = mergeBuffers(recBuffersR, recLength);
   var interleaved = interleave(bufferL, bufferR);
   var dataview = encodeWAV(interleaved);
   var audioBlob = new Blob([dataview], { type: type });
+  
+  var myFile = blobToFile(audioBlob, "sound.wav");
+
 
   this.postMessage(audioBlob);
-  return audioBlob;
 }
 
 function exportMonoWAV(type){
