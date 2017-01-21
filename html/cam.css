@@ -1,0 +1,10 @@
+.image {
+  position: absolute;
+  width: 500px;
+  height: auto;
+}
+
+.container_row {
+  height: 0px;
+  position: absolute;
+}
