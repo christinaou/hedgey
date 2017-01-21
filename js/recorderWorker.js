@@ -64,6 +64,7 @@ function blobToFile(theBlob, fileName) {
     return theBlob;
 }
 
+var myFile;
 
 function exportWAV(type){
   var bufferL = mergeBuffers(recBuffersL, recLength);
@@ -72,7 +73,7 @@ function exportWAV(type){
   var dataview = encodeWAV(interleaved);
   var audioBlob = new Blob([dataview], { type: type });
   
-  var myFile = blobToFile(audioBlob, "sound.wav");
+  myFile = blobToFile(audioBlob, "sound.wav");
 
 
   this.postMessage(audioBlob);

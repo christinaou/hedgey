@@ -30,13 +30,14 @@ function startRecording() {
 }
 
 
+
+
 function stopRecording() {
   recorder.stop();
   recorder.exportWAV(function(s) {
     audio.src = URL.createObjectURL(s);
   });
 }
-
 
 function clickRecord() {
   if (!recording) {
