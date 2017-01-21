@@ -66,6 +66,7 @@ function blobToFile(theBlob, fileName) {
 
 var myFile;
 
+
 function exportWAV(type){
   var bufferL = mergeBuffers(recBuffersL, recLength);
   var bufferR = mergeBuffers(recBuffersR, recLength);
@@ -77,7 +78,7 @@ function exportWAV(type){
   myFile = blobToFile(audioBlob, "sound.wav");
   console.log('first myFile');
   console.log(myFile);
-
+  audBlob = audioBlob;
   this.postMessage(audioBlob);
 }
 

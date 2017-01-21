@@ -42,7 +42,7 @@ function postSpeech() {
     xmlhttp.send(params);
 }
 
-
+var audBlob;
 function stopRecording() {
   console.log('lol');
   recorder.stop();
@@ -53,6 +53,8 @@ function stopRecording() {
     fd.append('fname', 'test.wav');
     console.log(myFile);
     console.log('heh');
+    console.log(audBlob);
+
     fd.append('data', myFile);
     $.ajax({
         type: 'POST',
