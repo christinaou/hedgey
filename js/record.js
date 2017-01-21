@@ -51,7 +51,7 @@ function stopRecording() {
   });
 
   var formData = new FormData();
-  formData.append("speechFile", myFile);
+  formData.append("speechFile.wav", myFile);
 
   console.log('created formData');
   var request = new XMLHttpRequest();
