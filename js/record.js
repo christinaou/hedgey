@@ -47,9 +47,9 @@ function stopRecording() {
   console.log('lol');
   recorder.stop();
   recorder.exportWAV(function(s) {
-    document.getElementById("flaskinput").src = URL.createObjectURL(s);
+    //document.getElementById("flaskinput").src = URL.createObjectURL(s);
 
-    $("#flaskinput").submit()
+    // $("#flaskinput").submit()
     // var fd = new FormData();
     // fd.append('fname', 'test.wav');
     // console.log(myFile);
