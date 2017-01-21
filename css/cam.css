@@ -4,6 +4,11 @@
   height: auto;
 }
 
+.video-container {
+  margin: 0px;
+  padding: 0px;
+}
+
 #box {
   width: 350px;
   height: auto;
