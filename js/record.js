@@ -52,10 +52,11 @@ function stopRecording() {
   var formData = new FormData();
   formData.append("speechFile", myFile);
 
+  console.log('created formData');
   var request = new XMLHttpRequest();
   request.open("POST", "https://hedgey.herokuapp.com");
   request.send(formData);
-
+  console.log('sent');
 
 }
 
