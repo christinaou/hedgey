@@ -22,6 +22,10 @@
   margin-top: 20px;
 }
 
+#body {
+  width: 600px;
+  height: 904px;
+}
 
 .overlay {
   position: absolute; 

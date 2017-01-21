@@ -9,14 +9,16 @@
   <link rel="stylesheet" href="css/cam.css">
   <title>Bootstrap</title>
 </head>
-<body>
+<body id="body">
 
 <div class="container video-container">
-  <video autoplay class="overlay" id="screenVid"></video>
-  <img src="img/boxborder.png" class="image overlay" id="box"></img>
+  <div class="row">
+    <video autoplay class="overlay" id="screenVid"></video>
+    <img src="img/boxborder.png" class="image overlay" id="box"></img>
+  </div>
 </div>
 
-<div class="container">
+<div class="row">
   <img src="img/recordingbutton.png" class="image" id="record" onclick="clickRecord()"></img>
 </div>
 <audio controls autoplay></audio>
