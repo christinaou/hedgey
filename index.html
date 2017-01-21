@@ -9,19 +9,18 @@
   <link rel="stylesheet" href="css/cam.css">
   <title>Bootstrap</title>
 </head>
-<body id="body">
-
-<div class="container video-container">
-  <div class="row">
-    <video autoplay class="overlay" id="screenVid"></video>
-    <img src="img/boxborder.png" class="image overlay" id="box"></img>
+<body>
+<div id="body">
+  <div class="container video-container">
+    <div class="row">
+      <video autoplay class="overlay" id="screenVid"></video>
+      <img src="img/boxborder.png" class="image overlay" id="box"></img>
+    </div>
   </div>
-</div>
 
-<div class="row">
   <img src="img/recordingbutton.png" class="image" id="record" onclick="clickRecord()"></img>
+  <audio controls autoplay></audio>
 </div>
-<audio controls autoplay></audio>
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

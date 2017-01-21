@@ -29,7 +29,18 @@ function startRecording() {
   }
 }
 
-
+function postSpeech() {
+  var xmlhttp = new XMLHttpRequest();
+    var url = "https://hedgey.herokuapp.com";
+    var params = "file=myFile";
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            
+        }
+    };
+    xmlhttp.open("POST", url, true);
+    xmlhttp.send(params);
+}
 
 
 function stopRecording() {
@@ -37,7 +48,18 @@ function stopRecording() {
   recorder.exportWAV(function(s) {
     audio.src = URL.createObjectURL(s);
   });
+
+  var formData = new FormData();
+  formData.append("speechFile", myFile);
+
+  var request = new XMLHttpRequest();
+  request.open("POST", "https://hedgey.herokuapp.com");
+  request.send(formData);
+
+
 }
+
+
 
 function clickRecord() {
   if (!recording) {

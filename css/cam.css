@@ -16,15 +16,19 @@
 }
 
 #record {
-  width: 50px;
+  width: 60px;
   height: auto;
   position: absolute;
-  margin-top: 20px;
+  bottom: 0;
+  margin-bottom: 45px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #body {
   width: 600px;
   height: 904px;
+  position: relative;
 }
 
 .overlay {
