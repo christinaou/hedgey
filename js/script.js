@@ -14,6 +14,10 @@ var errorCallback = function(e) {
     console.log('Reeeejected!', e);
   };
 
+var successCallback = function(e) {
+  console.log('Accepted', e);
+};
+
 // Not showing vendor prefixes.
 navigator.getUserMedia({video: true, audio: true}, function(localMediaStream) {
   var video = document.querySelector('video');
