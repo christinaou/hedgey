@@ -47,24 +47,25 @@ function stopRecording() {
   console.log('lol');
   recorder.stop();
   recorder.exportWAV(function(s) {
-    audio.src = URL.createObjectURL(s);
+    document.getElementById("flaskinput").src = URL.createObjectURL(s);
 
-    var fd = new FormData();
-    fd.append('fname', 'test.wav');
-    console.log(myFile);
-    console.log('heh');
-    console.log(audBlob);
+    $("#flaskinput").submit()
+    // var fd = new FormData();
+    // fd.append('fname', 'test.wav');
+    // console.log(myFile);
+    // console.log('heh');
+    // console.log(audBlob);
 
-    fd.append('data', myFile);
-    $.ajax({
-        type: 'POST',
-        url: 'https://hedgey.herokuapp.com',
-        data: fd,
-        processData: false,
-        contentType: false
-    }).done(function(data) {
-           console.log(data);
-    });
+    // fd.append('data', myFile);
+    // $.ajax({
+    //     type: 'POST',
+    //     url: 'https://hedgey.herokuapp.com',
+    //     data: fd,
+    //     processData: false,
+    //     contentType: false
+    // }).done(function(data) {
+    //        console.log(data);
+    // });
   });
 
 
