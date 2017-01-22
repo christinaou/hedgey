@@ -22,7 +22,6 @@ body {
   padding:0;
   width: 600px;
   height: 854px;
-  background-color:red;
 }
 
 #categoryname {
@@ -105,4 +104,5 @@ body {
   width: 600px;
   height: auto;
   position:fixed;
+  z-index:19;
 }
