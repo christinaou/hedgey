@@ -8,19 +8,11 @@ body {
 	background-repeat: no-repeat;
 
 }
-.play_button{
-	position:relative;
-	top:300px;
+back_button{
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
 }
-.settings_button{
-	margin:20px;
-	float: left;
-}
-.star_button{
-	float: right;
-	margin: 20px;
-}
-
 
 
 /*@font-face {
