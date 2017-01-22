@@ -95,7 +95,7 @@ body {
   display:none;
 }
 #screenVid {
-  bottom:0;
+  top:90px;
   width: 600px;
   height: auto;
   position:fixed;
