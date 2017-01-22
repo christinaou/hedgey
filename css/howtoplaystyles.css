@@ -14,7 +14,7 @@ body {
 
 .bg1 {
   background: url(../img/how1.jpg);
-  background-size: 600px 904px;
+  background-size: contain;
   background-repeat: no-repeat;
   margin:0;
   padding:0;
