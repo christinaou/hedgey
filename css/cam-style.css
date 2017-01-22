@@ -20,7 +20,7 @@ body {
   margin:0;
   padding:0;
   width: 600px;
-  height: 904px;
+  height: 854px;
   background-color:red;
 }
 
@@ -57,7 +57,7 @@ body {
   width: 440px;
   height: auto;
   left:78px;
-  position:relative;
+  position:fixed;
 }
 
 .insidebox {
