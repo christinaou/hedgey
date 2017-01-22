@@ -43,11 +43,8 @@ function startRecording() {
   var video = document.getElementById("screenVid");
   var canvas = document.getElementById("canv");
   canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
-  var globBlob;
-  canvas.toBlob(function(blob) {
-    globBlob = blob;
-  });
-  transferImage(globBlob);
+  var canImg = canvas.toDataURL("image/png");
+  transferImage(canImg);
 
 
   // var dataURL = canvas.toDataURL("image/png");
