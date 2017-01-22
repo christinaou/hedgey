@@ -13,8 +13,8 @@ body {
   margin:0;
   padding:0;
   top:0;
-  height: 904px;
-  width: 600px;
+  height: 100%;
+  width: auto;
   font-family: 'Palitoon';
   color: #8C7070;
 }
