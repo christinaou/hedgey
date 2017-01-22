@@ -35,9 +35,9 @@ body {
 }
 .next_button {
 	float: right;
-	margin-top:805px;
+	margin-top:795px;
 	margin-right:20px;
-	width:110px;
+	width:auto;
 	height:auto;
 }
 .home_button {
