@@ -27,6 +27,7 @@ function transferImage(capImage) {
   var formData = new FormData();
   formData.append("ifile", capImage, "image.png");
   var xhr = new XMLHttpRequest();
+  console.log(capImage);
   xhr.open('POST', url, true);
   xhr.send(formData);
 }
@@ -41,8 +42,11 @@ function startRecording() {
 
   var video = document.getElementById("screenVid");
   var canvas = document.getElementById("canv");
+  console.log(canvas);
   canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+  console.log(canvas);
   var dataURL = canvas.toDataURL();
+  console.log(dataURL);
 
   transferImage(dataURL);
   // var dataURL = canvas.toDataURL("image/png");
