@@ -1,6 +1,8 @@
 body {
     height:854px;
     width:600px;
+    min-width:600px;
+    min-height:854px;
 }
 .bg1{
 	background: url('../img/how1.jpg');
