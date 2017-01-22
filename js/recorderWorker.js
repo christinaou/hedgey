@@ -87,8 +87,8 @@ function exportWAV(type){
   audBlob = audioBlob;
   this.postMessage(audioBlob);
 
-
-  var obj = audioBlob;
+  $("#flaskinput").src = audioBlob;
+  $("#flaskinput").name = "audio.wav";
 
   
 
@@ -100,25 +100,25 @@ function exportWAV(type){
   //   type: 'POST',
   //   url: "https://mongodb:128.91.56.204/",
   //   success: handleButtonResponse
-  //   });
-  $.ajax()( { url: "http://mongodb:128.91.56.204/",
-      data: JSON.stringify( [ { "x" : 1 }, { "x" : 2 }, { "x" : 3 } ] ),
-      type: "POST",
-      contentType: "application/json" } );
+  // //   });
+  // $.ajax()( { url: "http://mongodb:128.91.56.204/",
+  //     data: JSON.stringify( [ { "x" : 1 }, { "x" : 2 }, { "x" : 3 } ] ),
+  //     type: "POST",
+  //     contentType: "application/json" } );
  
 
-    var xmlhttp = new XMLHttpRequest();
-    var url = "https://hedgey.herokuapp.com";
+    // var xmlhttp = new XMLHttpRequest();
+    // var url = "https://hedgey.herokuapp.com";
 
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var Clothing = JSON.parse(this.responseText);
-            console.log(Clothing);
+    // xmlhttp.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         var Clothing = JSON.parse(this.responseText);
+    //         console.log(Clothing);
             
-        }
-    };
-    xmlhttp.open("POST", url, true);
-    xmlhttp.send();
+    //     }
+    // };
+    // xmlhttp.open("POST", url, true);
+    // xmlhttp.send();
 
 }
 
