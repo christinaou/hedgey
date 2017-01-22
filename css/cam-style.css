@@ -31,6 +31,23 @@ body {
   z-index:15;
   margin-left:210px;
 }
+#worddescription {
+  font-family: 'Palitoon';
+  color: #8C7070;
+  font-size: 50px;
+  padding-top:100px;
+  text-align: center;
+  z-index:30;
+}
+/*.body {
+  width: 600px;
+  height: 904px;
+  background-color: #99ccff;
+  padding: 0px;
+  margin:0;
+  border-style:none;
+}*/
+
 .image {
   position: absolute;
   width: 500px;
@@ -52,14 +69,13 @@ body {
   margin-top:130px;
   left:160px;
   position:fixed;
-  
+  z-index:21;
 }
 
 .parent {
   position: relative;
   top: 0;
   left: 0;
-  z-index:100;
 }
 #record {
   width: 80px; 
