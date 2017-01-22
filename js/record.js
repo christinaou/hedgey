@@ -48,6 +48,9 @@ function postSpeech() {
 
 function stopRecording() {
   console.log('lol');
+  canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+  var capturedImg = canvas.toDataURL("image.png");
+  $("#replace").src = capturedImg;
   recorder.stop();
   recorder.exportWAV(function(s) {
 
@@ -55,9 +58,7 @@ function stopRecording() {
   var video = document.getElementById("screenVid");
   var canvas = document.getElementById("canv");
 
-  canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
-  var capturedImg = canvas.toDataURL("image.png");
-  $("#replace").src = capturedImg;
+
 }
 
 
