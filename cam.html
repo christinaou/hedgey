@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/cam-style.css">
+  <title>Camera</title>
+</head>
+
+<body>
+  
+  <header>
+      <a href="index.html"><img src="img/backbutton.png" class="back_button" style="width:25px;"></a>
+    <div id="categoryname">DRINKS</div>
+  </header>
+  
+  
+
+  <div class="body">
+  <div id="worddescription">WORD</div>
+
+  <div class="container video-container">
+    <div class="row">
+      <canvas id="canv"></canvas>
+      <video autoplay class="overlay" id="screenVid"></video>
+      <div class="parent">
+        <img src="img/boxborder.png" class="box"></img>
+        <img src="img/correct.png" class="insidebox">
+        <!--<img src="img/incorrect.png" class="insidebox">-->
+    </div>
+  </div>
+
+
+  <img src="img/recordingbutton.png" id="record" onclick="clickRecord()"></img>
+
+
+</div>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/recorderWorker.js"></script>
+<script src="js/recorderWorkerHelper.js"></script>
+<script src="js/record.js"></script>
+</body>
+</html>

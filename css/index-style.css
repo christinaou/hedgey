@@ -13,5 +13,10 @@ body {
 	top:300px;
 }
 .settings_button{
-	margin:10px;
+	margin:20px;
+	float: left;
+}
+.star_button{
+	float: right;
+	margin: 20px;
 }

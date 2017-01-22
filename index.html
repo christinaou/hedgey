@@ -5,39 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/cam.css">
-  <title>Bootstrap</title>
+  <link rel="stylesheet" href="css/index-style.css">
+  <link rel="stylesheet" href="css/cam-style.css">
+  <link rel="stylesheet" href="css/howtoplaystyles.css">
+  <title>Index</title>
 </head>
-<body>
-<div id="body">
+<body class="front_bg">
 
-
- <!--  <form action="https://hedgey.herokuapp.com/upload/" method='post' enctype="multipart/form-data">
-    <input type='file' name='file' id='flaskinput'/>
-    <input type='submit' id='subButton' value='submit'>
-  </form> -->
-
-
-  <div class="container video-container">
-    <div class="row">
-      <canvas id="canv"></canvas>
-      <video autoplay class="overlay" id="screenVid"></video>
-      <img src="img/boxborder.png" class="image overlay" id="box"></img>
+    <div class="settings_button">
+      <a href="howtoplay1.html"><img src="img/questionmark.png" style="height:45px;width:auto"></a>
     </div>
-  </div>
 
-  <img src="img/recordingbutton.png" class="image" id="record" onclick="clickRecord()"></img>
-  <audio controls autoplay></audio>
+    <div class="star_button">
+      <a href="stats.html"><img src="img/star.png" style="height:45px;width:auto"></a>
+    </div>
 
-  <img src="img/recordingbutton.png" id="replace"></img>
-</div>
+    <div class="play_button" align="center">
+      <a href="cam.html"><img src="img/arrow_135x135_400fromtop.png" style="width:135px;height:135px"></a>
+    </div>
+  
 
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/script.js"></script>
-<script src="js/recorderWorker.js"></script>
-<script src="js/recorderWorkerHelper.js"></script>
-<script src="js/record.js"></script>
+
 </body>
 </html>

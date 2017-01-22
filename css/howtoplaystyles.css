@@ -1,0 +1,54 @@
+body {
+  margin:0;
+  padding:0;
+  top:0;
+  height: 904px;
+  width: 600px;
+}
+
+.back_button{
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.bg1 {
+  background: url(../img/how1.png);
+  background-size: 600px 904px;
+  background-repeat: no-repeat;
+  margin:0;
+  padding:0;
+}
+.bg2 {
+  background: url(../img/how2.png);
+  background-size: 600px 904px;
+  background-repeat: no-repeat;
+  margin:0;
+  padding:0;
+}
+.bg3 {
+  background: url(../img/how3.png);
+  background-size: 600px 904px;
+  background-repeat: no-repeat;
+  margin:0;
+  padding:0;
+}
+
+.next_button {
+	float: right;
+	margin-top:835px;
+	margin-right:20px;
+	width:110px;
+	height:auto;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.home_button {
+	float: right;
+	margin-top:835px;
+	margin-right:20px;
+	width:110px;
+	height:auto;
+  padding-top: 10px;
+  padding-left: 10px;
+}
