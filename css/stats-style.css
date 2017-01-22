@@ -16,6 +16,7 @@ body {
   min-width: 600px;
   font-family: 'Palitoon';
   color: #8C7070;
+  height: 100vh;
 }
 
 .bg {
