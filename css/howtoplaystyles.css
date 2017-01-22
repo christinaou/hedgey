@@ -35,20 +35,20 @@ body {
 }
 .next_button {
 	float: right;
-	margin-top:805px;
-	margin-right:20px;
-	width:110px;
-	height:auto;
+    	margin-top: 770px;
+    	margin-right: 20px;
+    	position: relative;
+    	width: 120px;
+    	height: auto;
 }
 .home_button {
 	float: right;
-	margin-top:835px;
-	margin-right:20px;
-	width:110px;
-	height:auto;
-  padding-top: 10px;
-  padding-left: 10px;
-} 
+    	margin-top: 770px;
+    	margin-right: 20px;
+    	position: relative;
+    	width: 120px;
+    	height: auto;
+}
 .back_button{
   float: left;
   padding-top: 10px;
