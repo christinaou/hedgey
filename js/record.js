@@ -22,7 +22,7 @@ var audio = document.querySelector('audio');
 
 
 function transferImage(capImage) {
-  var url = "https://hedgey.herokuapp.com/store";
+  var url = "https://hedgey.herokuapp.com/upload";
   var formData = new FormData();
   formData.append("file", capImage, "image.png");
   var xhr = new XMLHttpRequest();
