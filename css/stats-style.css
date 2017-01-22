@@ -13,10 +13,8 @@ body {
   margin:0;
   padding:0;
   top:0;
-  min-width: 600px;
   font-family: 'Palitoon';
   color: #8C7070;
-  height: 100vh;
 }
 
 .bg {
