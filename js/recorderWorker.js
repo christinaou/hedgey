@@ -87,9 +87,16 @@ function exportWAV(type){
   audBlob = audioBlob;
   this.postMessage(audioBlob);
 
-  $("#flaskinput").src = audioBlob;
-  $("#flaskinput").name = "audio.wav";
+  // $("#flaskinput").src = audioBlob;
+  // $("#flaskinput").name = "audio.wav";
 
+  var url = "https://hedgey.herokuapp.com/upload/";
+  var formData = new FormData();
+  formData.append("name", audioBlob, "blobobj");
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', url, true);
+  // xhr.send(formData);
+  xhr.send("HELLO KRISTIN");
   
 
   // // make an ajax call
