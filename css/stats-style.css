@@ -33,17 +33,16 @@ body {
   padding-top: 32px;
   font-weight: normal;
 }
-#tablediv {
-	margin-top:200px;
-	position:relative;
-}
+
 table {
   height: 540px;
   width: 518px;
   left: 10%;
   margin-left: 43px;
+  margin-top: 50px;
+  top:100px;
   overflow-y: scroll;
-  position: fixed;
+  position: static;
 }
 
 th {
