@@ -90,3 +90,6 @@ body {
 .overlay {
   position: absolute; 
 }
+#canv {
+  display:none;
+}
