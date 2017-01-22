@@ -39,6 +39,7 @@ table {
   width: 518px;
   left: 10%;
   margin-left: 43px;
+  margin-top:30px;
   overflow-y: scroll;
   position: fixed;
 }
