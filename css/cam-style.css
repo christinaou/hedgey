@@ -89,9 +89,14 @@ body {
 
 .overlay {
   position: absolute; 
-  width:100px;
-  height:100px;
 }
 #canv {
   display:none;
+}
+#screenVid {
+  width:100px;
+  height:100px;
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
 }
