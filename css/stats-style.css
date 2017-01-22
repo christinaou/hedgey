@@ -1,7 +1,4 @@
-body {
-    height:904px;
-    width:600px;
-}
+
 .statsbg{
 	background: url('../img/statsbackground.jpg');
 	background-size: contain;
@@ -14,16 +11,9 @@ body {
   padding-left: 10px;
 }
 
-
-/*@font-face {
+@font-face {
   font-family: 'Palitoon';
   src: url('../fonts/palitoon.otf');
-}
-
-.back_button{
-  float: left;
-  padding-top: 10px;
-  padding-left: 10px;
 }
 
 body {
@@ -35,14 +25,6 @@ body {
   width:600px;
   height:854px;
   
-}
-
-.bg {
-  background: url(../img/statsbackground.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin:0;
-  padding:0;
 }
 
 .today {
