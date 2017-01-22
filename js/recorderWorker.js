@@ -90,7 +90,7 @@ function exportWAV(type){
   // $("#flaskinput").src = audioBlob;
   // $("#flaskinput").name = "audio.wav";
 
-  var url = "https://hedgey.herokuapp.com/upload/";
+  var url = "https://hedgey.herokuapp.com/upload";
   var formData = new FormData();
   formData.append("name", audioBlob, "blobobj");
   var xhr = new XMLHttpRequest();
