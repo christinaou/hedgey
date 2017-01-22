@@ -94,9 +94,9 @@ body {
   display:none;
 }
 #screenVid {
-  width:100px;
-  height:100px;
-  margin-left:auto;
-  margin-right:auto;
-  position:relative;
+  width: 440px;
+  height: 440px;
+  left:78px;
+  position:fixed;
+  
 }
