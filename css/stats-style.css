@@ -2,7 +2,7 @@ body {
     height:904px;
     width:600px;
 }
-.bg{
+.statsbg{
 	background: url('../img/statsbackground.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
