@@ -87,8 +87,6 @@ function exportWAV(type){
   audBlob = audioBlob;
   this.postMessage(audioBlob);
 
-  // $("#flaskinput").src = audioBlob;
-  // $("#flaskinput").name = "audio.wav";
 
   var url = "https://hedgey.herokuapp.com/upload";
   var formData = new FormData();
@@ -96,36 +94,6 @@ function exportWAV(type){
   var xhr = new XMLHttpRequest();
   xhr.open('POST', url, true);
   xhr.send(formData);
-  
-
-  // // make an ajax call
-  // $.ajax({
-  //   dataType: 'jsonp',
-  //   jsonpCallback: '_wrapper',
-  //   data: $('#flaskinput').serialize(),
-  //   type: 'POST',
-  //   url: "https://mongodb:128.91.56.204/",
-  //   success: handleButtonResponse
-  // //   });
-  // $.ajax()( { url: "http://mongodb:128.91.56.204/",
-  //     data: JSON.stringify( [ { "x" : 1 }, { "x" : 2 }, { "x" : 3 } ] ),
-  //     type: "POST",
-  //     contentType: "application/json" } );
- 
-
-    // var xmlhttp = new XMLHttpRequest();
-    // var url = "https://hedgey.herokuapp.com";
-
-    // xmlhttp.onreadystatechange = function() {
-    //     if (this.readyState == 4 && this.status == 200) {
-    //         var Clothing = JSON.parse(this.responseText);
-    //         console.log(Clothing);
-            
-    //     }
-    // };
-    // xmlhttp.open("POST", url, true);
-    // xmlhttp.send();
-
 }
 
 function exportMonoWAV(type){

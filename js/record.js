@@ -42,44 +42,22 @@ function postSpeech() {
     xmlhttp.send(params);
 }
 
-var audBlob;
+
+    
+
+
 function stopRecording() {
   console.log('lol');
   recorder.stop();
   recorder.exportWAV(function(s) {
-    //document.getElementById("flaskinput").src = URL.createObjectURL(s);
 
-    // $("#flaskinput").submit()
-    // var fd = new FormData();
-    // fd.append('fname', 'test.wav');
-    // console.log(myFile);
-    // console.log('heh');
-    // console.log(audBlob);
-
-    // fd.append('data', myFile);
-    // $.ajax({
-    //     type: 'POST',
-    //     url: 'https://hedgey.herokuapp.com',
-    //     data: fd,
-    //     processData: false,
-    //     contentType: false
-    // }).done(function(data) {
-    //        console.log(data);
-    // });
   });
+  var video = document.getElementById("screenVid");
+  var canvas = document.getElementById("canv");
 
-
-
-
-  // var formData = new FormData();
-  // formData.append("speechFile.wav", myFile);
-
-  // console.log('created formData');
-  // var request = new XMLHttpRequest();
-  // request.open("POST", "https://hedgey.herokuapp.com");
-  // request.send(formData);
-  // console.log('sent');
-
+  canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+  var capturedImg = canvas.toDataURL("image.png");
+  $("#replace").src = capturedImg;
 }
 
 
