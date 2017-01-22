@@ -13,15 +13,13 @@ body {
   margin:0;
   padding:0;
   top:0;
-  height: 904px;
-  width: 600px;
   font-family: 'Palitoon';
   color: #8C7070;
 }
 
 .bg {
   background: url(../img/background.png);
-  background-size: 600px 904px;
+  background-size: cover;
   background-repeat: no-repeat;
   margin:0;
   padding:0;
