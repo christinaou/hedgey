@@ -92,11 +92,10 @@ function exportWAV(type){
 
   var url = "https://hedgey.herokuapp.com/upload";
   var formData = new FormData();
-  formData.append("name", audioBlob, "blobobj");
+  formData.append("file", audioBlob, "blobobj.wav");
   var xhr = new XMLHttpRequest();
   xhr.open('POST', url, true);
-  // xhr.send(formData);
-  xhr.send("HELLO KRISTIN");
+  xhr.send(formData);
   
 
   // // make an ajax call
