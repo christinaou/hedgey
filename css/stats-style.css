@@ -39,9 +39,8 @@ table {
   width: 518px;
   left: 10%;
   margin-left: 43px;
-  margin-top: 200px;
   overflow-y: scroll;
-  position: static;
+  position: fixed;
 }
 
 th {
