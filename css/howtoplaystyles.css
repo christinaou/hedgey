@@ -1,6 +1,8 @@
 body {
-    height:904px;
+    height:854px;
     width:600px;
+    min-width:600px;
+    min-height:854px;
 }
 .bg1{
 	background: url('../img/how1.jpg');
@@ -33,12 +35,10 @@ body {
 }
 .next_button {
 	float: right;
-	margin-top:835px;
+	margin-top:805px;
 	margin-right:20px;
 	width:110px;
 	height:auto;
-  padding-top: 10px;
-  padding-left: 10px;
 }
 .home_button {
 	float: right;
