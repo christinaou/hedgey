@@ -21,6 +21,7 @@ body {
   padding:0;
   width: 600px;
   height: 904px;
+  background-color:red;
 }
 
 #categoryname {
@@ -57,12 +58,10 @@ body {
   height: auto;
   left:78px;
   position:relative;
-  top:0px;
 }
 
 .insidebox {
   width:300px;
-  top:170px;
   left: 160px;
   position: absolute;
 }
