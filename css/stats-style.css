@@ -2,8 +2,8 @@ body {
     height:904px;
     width:600px;
 }
-.front_bg{
-	background: url('../img/backgroundimg_854x600.jpg');
+.bg{
+	background: url('../img/statsbackground.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 
