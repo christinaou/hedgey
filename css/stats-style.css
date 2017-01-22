@@ -17,7 +17,7 @@
 body {
   margin:0;
   padding:0;
-  top:0;
+  top:20px;
   font-family: 'Palitoon';
   color: #8C7070;
   width:600px;
@@ -39,8 +39,8 @@ table {
   width: 518px;
   left: 10%;
   margin-left: 43px;
-  margin-top: 100px;
-  top:150px;
+  margin-top: 50px;
+  top:100px;
   overflow-y: scroll;
   position: static;
 }
