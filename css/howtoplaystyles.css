@@ -14,21 +14,21 @@ body {
 
 .bg1 {
   background: url(../img/how1.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   margin:0;
   padding:0;
 }
 .bg2 {
   background: url(../img/how2.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   margin:0;
   padding:0;
 }
 .bg3 {
   background: url(../img/how3.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   margin:0;
   padding:0;
