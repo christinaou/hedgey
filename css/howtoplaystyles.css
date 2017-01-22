@@ -1,32 +1,4 @@
 body {
-    height:904px;
-    width:600px;
-}
-.front_bg{
-	background: url('../img/backgroundimg_904x600.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-
-}
-.play_button{
-	position:relative;
-	top:300px;
-}
-.settings_button{
-	margin:20px;
-	float: left;
-}
-.star_button{
-	float: right;
-	margin: 20px;
-}
-
-
-
-
-
-/*
-body {
   margin:0;
   padding:0;
   top:0;
@@ -41,8 +13,8 @@ body {
 }
 
 .bg1 {
-  background: url(../img/how1.png);
-  background-size: contain;
+  background: url(../img/how1.jpg);
+  background-size: 600x 904px;
   background-repeat: no-repeat;
   margin:0;
   padding:0;
@@ -79,4 +51,4 @@ body {
 	height:auto;
   padding-top: 10px;
   padding-left: 10px;
-} */
+} 
