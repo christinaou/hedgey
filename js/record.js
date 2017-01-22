@@ -23,12 +23,13 @@ var audio = document.querySelector('audio');
 
 function transferImage(capImage) {
   var url = "https://hedgey.herokuapp.com/store";
-  var formData = new FormData();
-  formData.append("file", capImage, "captImage");
+//  var formData = new FormData();
+//  formData.append("file", capImage, "captImage");
   var xhr = new XMLHttpRequest();
   console.log(capImage);
   xhr.open('POST', url, true);
-  xhr.send(formData);
+//  xhr.send(formData);
+  xhr.send(capImage);
 }
 
 
