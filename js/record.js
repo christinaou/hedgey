@@ -34,12 +34,13 @@ function transferImage(capImage) {
 
 
 function startRecording() {
+  console.log("startRecording");
   if (navigator.getUserMedia) {
     navigator.getUserMedia({audio: true}, onSuccess, onFail);
   } else {
     console.log('navigator.getUserMedia not present');
   }
-
+  console.log("before video");
   var video = document.getElementById("screenVid");
   var canvas = document.getElementById("canv");
   console.log(canvas);
