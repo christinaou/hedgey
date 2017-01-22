@@ -14,7 +14,7 @@ header {
   height: 90px;
   background-color: #f7f1f0;
   position: fixed;
-  z-index:20;
+  z-index:10;
 }
 
 body {
@@ -59,6 +59,7 @@ body {
   height: auto;
   left:78px;
   position:fixed;
+  z-index:20;
 }
 
 .insidebox {
@@ -75,7 +76,7 @@ body {
 #record {
   width: 80px; 
   left: 260px;
-  top:750px;
+  top:730px;
   height: auto;
   position: absolute;
   margin-left: auto;
