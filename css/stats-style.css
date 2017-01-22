@@ -15,11 +15,14 @@ body {
   top:0;
   font-family: 'Palitoon';
   color: #8C7070;
+  width:600px;
+  height:854px;
+  
 }
 
 .bg {
-  background: url(../img/background.png);
-  background-size: cover;
+  background: url(../img/statsbackground.jpg);
+  background-size: contain;
   background-repeat: no-repeat;
   margin:0;
   padding:0;
