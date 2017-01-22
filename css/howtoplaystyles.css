@@ -20,6 +20,29 @@ body {
 	float: right;
 	margin: 20px;
 }
+.next_button {
+	float: right;
+	margin-top:835px;
+	margin-right:20px;
+	width:110px;
+	height:auto;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.home_button {
+	float: right;
+	margin-top:835px;
+	margin-right:20px;
+	width:110px;
+	height:auto;
+  padding-top: 10px;
+  padding-left: 10px;
+} 
+.back_button{
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
+}
 
 /*body {
   margin:0;
@@ -28,13 +51,6 @@ body {
   height: 904px;
   width: 600px;
 }
-
-.back_button{
-  float: left;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-
 .bg1 {
   background: url(../img/how1.jpg);
   background-size: cover;
@@ -57,21 +73,4 @@ body {
   padding:0;
 }
 
-.next_button {
-	float: right;
-	margin-top:835px;
-	margin-right:20px;
-	width:110px;
-	height:auto;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-.home_button {
-	float: right;
-	margin-top:835px;
-	margin-right:20px;
-	width:110px;
-	height:auto;
-  padding-top: 10px;
-  padding-left: 10px;
-} */
+*/
