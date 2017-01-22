@@ -22,10 +22,10 @@ var recorder;
 var audio = document.querySelector('audio');
 
 
-function transferImage(image) {
+function transferImage(capImage) {
   var url = "https://hedgey.herokuapp.com/store";
   var formData = new FormData();
-  formData.append("file", image, "image.png");
+  formData.append("ifile", capImage, "image.png");
   var xhr = new XMLHttpRequest();
   xhr.open('POST', url, true);
   xhr.send(formData);
@@ -46,20 +46,6 @@ function startRecording() {
   transferImage(capturedImg);
   $("#replace").src = capturedImg;
 }
-
-function postSpeech() {
-  var xmlhttp = new XMLHttpRequest();
-    var url = "https://hedgey.herokuapp.com";
-    var params = "file=myFile";
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            
-        }
-    };
-    xmlhttp.open("POST", url, true);
-    xmlhttp.send(params);
-}
-
 
 
 
