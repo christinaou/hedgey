@@ -32,7 +32,11 @@ navigator.getUserMedia({video: true, audio: false}, function(localMediaStream) {
 
 var vgaConstraints = {
   video: {
-    facingMode: "environment"
+    facingMode: "environment",
+    mandatory: {
+      maxWidth: 600,
+      maxHeight: 904
+    }
   }
 };
 
