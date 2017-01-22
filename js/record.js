@@ -42,9 +42,7 @@ function startRecording() {
   console.log("before video");
   var video = document.getElementById("screenVid");
   var canvas = document.getElementById("canv");
-  console.log(canvas);
   canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
-  console.log(canvas);
   var globBlob;
   canvas.toBlob(function(blob) {
     globBlob = blob;
