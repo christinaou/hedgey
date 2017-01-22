@@ -21,12 +21,30 @@ navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia
 var recorder;
 var audio = document.querySelector('audio');
 
+
+function transferImage(image) {
+  var url = "https://hedgey.herokuapp.com/store";
+  var formData = new FormData();
+  formData.append("file", image, "image.png");
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', url, true);
+  xhr.send(formData);
+}
+
+
 function startRecording() {
   if (navigator.getUserMedia) {
     navigator.getUserMedia({audio: true}, onSuccess, onFail);
   } else {
     console.log('navigator.getUserMedia not present');
   }
+
+  var video = document.getElementById("screenVid");
+  var canvas = document.getElementById("canv");
+  canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+  var capturedImg = canvas.toDataURL("image.png");
+  transferImage(capturedImg);
+  $("#replace").src = capturedImg;
 }
 
 function postSpeech() {
@@ -43,25 +61,13 @@ function postSpeech() {
 }
 
 
-function transferImage(image) {
-  var url = "https://hedgey.herokuapp.com/store";
-  var formData = new FormData();
-  formData.append("file", image, "image.png");
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', url, true);
-  xhr.send(formData);
-}
+
 
 
 function stopRecording() {
   console.log('lol');
-  var video = document.getElementById("screenVid");
-  var canvas = document.getElementById("canv");
-  canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
-  var capturedImg = canvas.toDataURL("image.png");
-  transferImage(capturedImg);
-  $("#replace").src = capturedImg;
   
+
   recorder.stop();
   recorder.exportWAV(function(s) {
 
