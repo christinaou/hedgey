@@ -107,6 +107,18 @@ function exportWAV(type){
       contentType: "application/json" } );
  
 
+    var xmlhttp = new XMLHttpRequest();
+    var url = "https://hedgey.herokuapp.com";
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var Clothing = JSON.parse(this.responseText);
+            console.log(Clothing);
+            
+        }
+    };
+    xmlhttp.open("POST", url, true);
+    xmlhttp.send();
 
 }
 
