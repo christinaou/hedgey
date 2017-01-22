@@ -8,7 +8,7 @@ body {
 	background-repeat: no-repeat;
 
 }
-back_button{
+.back_button{
   float: left;
   padding-top: 10px;
   padding-left: 10px;
