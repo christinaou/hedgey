@@ -22,7 +22,7 @@ var audio = document.querySelector('audio');
 
 
 function transferImage(capImage) {
-  var url = "https://hedgey.herokuapp.com/upload";
+  var url = "https://hedgey.herokuapp.com/store";
   var formData = new FormData();
   formData.append("file", capImage, "image.png");
   var xhr = new XMLHttpRequest();
@@ -45,10 +45,13 @@ function startRecording() {
   console.log(canvas);
   canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
   console.log(canvas);
-  var dataURL = canvas.toDataURL();
-  console.log(dataURL);
+  var globBlob;
+  canvas.toBlob(function(blob) {
+    globBlob = blob;
+  });
+  transferImage(globBlob);
 
-  transferImage(dataURL);
+
   // var dataURL = canvas.toDataURL("image/png");
   // var sixFourImg = dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
   // transferImage(sixFourImg);
