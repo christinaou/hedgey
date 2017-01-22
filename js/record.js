@@ -65,7 +65,7 @@ function stopRecording() {
 
   });
   
-  transferImage(capturedImg);
+  //transferImage(capturedImg);
 
 }
 
