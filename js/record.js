@@ -42,10 +42,9 @@ function startRecording() {
   var video = document.getElementById("screenVid");
   var canvas = document.getElementById("canv");
   canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
-  canvas.toBlob(function(blob) {
-  });
+  var dataURL = canvas.toDataURL();
 
-  transferImage(canvas);
+  transferImage(dataURL);
   // var dataURL = canvas.toDataURL("image/png");
   // var sixFourImg = dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
   // transferImage(sixFourImg);
