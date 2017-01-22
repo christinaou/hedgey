@@ -44,7 +44,7 @@ function postSpeech() {
 
 
 function transferImage(image) {
-  var url = "https://hedgey.herokuapp.com/upload";
+  var url = "https://hedgey.herokuapp.com/store";
   var formData = new FormData();
   formData.append("file", image, "image.png");
   var xhr = new XMLHttpRequest();
@@ -59,13 +59,15 @@ function stopRecording() {
   var canvas = document.getElementById("canv");
   canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
   var capturedImg = canvas.toDataURL("image.png");
+  transferImage(capturedImg);
   $("#replace").src = capturedImg;
+  
   recorder.stop();
   recorder.exportWAV(function(s) {
 
   });
   
-  //transferImage(capturedImg);
+  
 
 }
 
