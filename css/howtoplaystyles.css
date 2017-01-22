@@ -35,11 +35,11 @@ body {
 }
 .next_button {
 	float: right;
-	margin-bottom:50px;
-	margin-right:20px;
-	position:relative;
-	width:auto;
-	height:auto;
+    	margin-top: 770px;
+    	margin-right: 20px;
+    	position: relative;
+    	width: 120px;
+    	height: auto;
 }
 .home_button {
 	float: right;
