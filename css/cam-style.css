@@ -68,6 +68,7 @@ body {
   height: auto;
   margin-top:30px;
   left:160px;
+  top:30px;
   position:fixed;
   z-index:21;
 }
