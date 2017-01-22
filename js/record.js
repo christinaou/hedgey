@@ -43,7 +43,14 @@ function postSpeech() {
 }
 
 
-    
+function transferImage(image) {
+  var url = "https://hedgey.herokuapp.com/upload";
+  var formData = new FormData();
+  formData.append("file", image, "image.png");
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', url, true);
+  xhr.send(formData);
+}
 
 
 function stopRecording() {
@@ -58,7 +65,7 @@ function stopRecording() {
 
   });
   
-
+  transferImage(capturedImg);
 
 }
 
@@ -75,3 +82,27 @@ function clickRecord() {
     recording = false;
   }
 }
+
+
+
+/* RESULTS */
+
+function results(x) {
+  var res = x;
+  if (res == []) {
+    console.log("Wrong");
+  } else {
+    console.log("Right");
+    for (var i = 0; i < len(res); i++) {
+      console.log(res[i]);
+    }
+  }
+}
+
+
+
+
+
+
+
+

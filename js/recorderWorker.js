@@ -64,14 +64,21 @@ function blobToFile(theBlob, fileName) {
     return theBlob;
 }
 
-var myFile;
 
 function handleButtonResponse(data) {
       // parse the json string
       var jsonObject = JSON.parse(data);
       console.log(jsonObject);
-      console.log("huzzah");
   }
+
+function transferWAV(blob) {
+  var url = "https://hedgey.herokuapp.com/upload";
+  var formData = new FormData();
+  formData.append("file", blob, "blob.wav");
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', url, true);
+  xhr.send(formData);
+}
 
 function exportWAV(type){
   var bufferL = mergeBuffers(recBuffersL, recLength);
@@ -80,20 +87,12 @@ function exportWAV(type){
   var dataview = encodeWAV(interleaved);
   var audioBlob = new Blob([dataview], { type: "audio/wav" });
   console.log(audioBlob);
-  console.log('audio bef');
+
   myFile = blobToFile(audioBlob, "sound.wav");
-  console.log('first myFile');
-  console.log(myFile);
-  audBlob = audioBlob;
   this.postMessage(audioBlob);
 
-
-  var url = "https://hedgey.herokuapp.com/upload";
-  var formData = new FormData();
-  formData.append("file", audioBlob, "blobobj.wav");
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', url, true);
-  xhr.send(formData);
+  transferWAV(audioBlob);
+  
 }
 
 function exportMonoWAV(type){
