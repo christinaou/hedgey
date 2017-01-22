@@ -43,8 +43,7 @@ function startRecording() {
   var canvas = document.getElementById("canv");
   canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
   canvas.toBlob(function(blob) {
-    };
-  );
+  });
 
   transferImage(canvas);
   // var dataURL = canvas.toDataURL("image/png");
