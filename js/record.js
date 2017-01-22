@@ -1,5 +1,8 @@
 var recording = false;
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 var onFail = function(e) {
             console.log('Rejected!', e);
@@ -26,6 +29,7 @@ function transferImage(capImage) {
   var url = "https://hedgey.herokuapp.com/store";
   var formData = new FormData();
   formData.append("ifile", capImage, "image.png");
+  await sleep(4000);
   var xhr = new XMLHttpRequest();
   console.log(capImage);
   xhr.open('POST', url, true);
@@ -43,6 +47,7 @@ function startRecording() {
   console.log("before video");
   var video = document.getElementById("screenVid");
   var canvas = document.getElementById("canv");
+  await sleep(1000);
   console.log(canvas);
   canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
   console.log(canvas);
