@@ -1,0 +1,21 @@
+.pics {
+  height: 100vh;
+}
+
+.center {
+  margin: auto;
+}
+
+.size-fit {
+  height:100%;
+  width: auto;
+  object-fit: contain;
+  margin: auto;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  height: 100%;    /* Set slide height here */
+  width: auto;
+  object-fit: contain;
+}
